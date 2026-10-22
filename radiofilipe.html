@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadioFilipe - Painel Informativo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 { color: #0070f3; } /* Cor padrão Vercel */
+        .status-box {
+            background: #eef2ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .player-simulado {
+            margin: 25px 0;
+        }
+        .btn-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .btn-link:hover { background-color: #333; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>RadioFilipe</h1>
+        <p>Transmissão de Informações via HTML</p>
+
+        <!-- Secção de Informações da Aplicação -->
+        <div class="status-box">
+            <p>Estado do Sinal: <span style="color: #10b981;">Online</span></p>
+            <p>Programa Atual: <span id="programa">Emissão Especial</span></p>
+            <p>Informação Atualizada: <span id="info">A aguardar dados de aplica-opal.vercel.app...</span></p>
+        </div>
+
+        <!-- Reprodutor HTML5 Simples -->
+        <div class="player-simulado">
+            <h3>Leitor de Áudio</h3>
+            <audio controls>
+                <!-- Substituir o URL abaixo pelo link real se necessário futuramente -->
+                <source src="https://camara-orcin.vercel.app" type="audio/mpeg">
+                O seu navegador não suporta este elemento de áudio.
+            </audio>
+        </div>
+
+        <!-- Ligação de Cruzamento de Plataformas -->
+        <a href="https://aplica-opal.vercel.app" class="btn-link" target="_blank">Aceder ao Aplica-Opal</a>
+    </div>
+
+    <script>
+        // Exemplo simples de como o HTML pode receber/simular a troca de informações
+        // No futuro, este bloco pode ler dados reais da sua API na Vercel
+        setTimeout(() => {
+            document.getElementById('info').innerText = "Ligação estabelecida com sucesso com o ecossistema Opal!";
+        }, 2000);
+    </script>
+
+</body>
+</html>
